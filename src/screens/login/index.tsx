@@ -19,7 +19,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 export const LoginScreen = () => {
   const login = (param: { username: string; password: string }) => {
-    fetch(`${apiUrl}/login`, {
+    fetch(`${apiUrl}/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export const LoginScreen = () => {
         <label htmlFor="password">密码</label>
         <input type="password" id={"password"} />
       </div>
-      <button type="submit">登录</button>
+      <button type="submit">注册</button>
     </form>
   );
 };
