@@ -41,9 +41,52 @@ export const http = async (
       }
     });
 };
+
+//JS中的typeof，是在runtime时运行的
+//return typeof 1 === 'number'
+
+//TS中的typeof，是在静态环境运行的
+//return (...[endpoint, config]: Parameters<typeof http>) =>
+
 export const useHttp = () => {
   const { user } = useAuth();
-  //todo:讲解TS操作符
+  //TS Utility Types的用法：用泛型给它传入一个其他类型，然后Utility type对这个类型进行某种操作
   return (...[endpoint, config]: Parameters<typeof http>) =>
     http(endpoint, { ...config, token: user?.token });
+};
+
+//联合类型
+let myFavoriteNumber: string | number;
+myFavoriteNumber = "seven";
+myFavoriteNumber = 7;
+// myFavoriteNumber={}; TS2322: Type '{}' is not assigned to type 'string | number'
+let jackFavoriteNumber: string | number;
+
+//类型别名在很多情况下可以和interface互换
+// interface Person {
+//   name: string;
+// }
+
+// type Person = { name: string };
+
+// const xiaoMing: Person = { name: "xiaoming" };
+
+//类型别名，interface在这种情况下没法代替type
+type FavoriteNumber = string | number;
+let roseFavoriteNumber: FavoriteNumber = "6";
+
+//interface也没法实现Ultility type
+type Person = {
+  name: string;
+  age: number;
+};
+const xiaoMing: Partial<Person> = {};
+const shenMiRen: Omit<Person, "name" | "age"> = {};
+type PersonKeys = keyof Person;
+type PersonOnlyName = Pick<Person, "name" | "age">;
+type Age = Exclude<PersonKeys, "name">;
+
+//Partial的实现
+type Partial<T> = {
+  [P in keyof T]?: T[P];
 };
