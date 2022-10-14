@@ -3,11 +3,22 @@ import { useAuth } from "context/auth-context";
 import React from "react";
 import { LongButton } from "unauthenticated-app";
 
-export const RegisterScreen = () => {
+export const RegisterScreen = ({
+  onError,
+}: {
+  onError: (error: Error) => void;
+}) => {
   const { register, user } = useAuth();
 
-  const handleSubmit = (values: { username: string; password: string }) => {
-    register(values);
+  const handleSubmit = async (values: {
+    username: string;
+    password: string;
+  }) => {
+    try {
+      await register(values);
+    } catch (e) {
+      onError(e);
+    }
   };
   return (
     <Form onFinish={handleSubmit}>
@@ -22,6 +33,12 @@ export const RegisterScreen = () => {
         rules={[{ required: true, message: "请输入密码" }]}
       >
         <Input placeholder={"密码"} type="password" id={"password"} />
+      </Form.Item>
+      <Form.Item
+        name={"cpassword"}
+        rules={[{ required: true, message: "请确认密码" }]}
+      >
+        <Input placeholder={"确认密码"} type="password" id={"cpassword"} />
       </Form.Item>
       <Form.Item>
         <LongButton htmlType={"submit"} type={"primary"}>
