@@ -14,9 +14,11 @@ import { ReactComponent as SoftwareLogo } from "./assets/software-logo.svg";
 // 从内容出发：用flex
 // 从布局出发：用grid
 export const AuthenticatedApp = () => {
-  const { user } = useAuth();
+  const { logout, user } = useAuth();
+  const value: any = undefined;
   return (
     <Container>
+      {value.notExist}
       <Header between={true}>
         <HeaderLeft gap={true}>
           <SoftwareLogo width={"18rem"} color={"rgb(38,132,255)"} />
