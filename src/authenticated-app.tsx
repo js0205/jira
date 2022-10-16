@@ -4,9 +4,10 @@ import { useAuth } from "context/auth-context";
 import { ProjectScreen } from "screens/project";
 import { ProjectListScreen } from "screens/project-list";
 import { ReactComponent as SoftwareLogo } from "./assets/software-logo.svg";
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 import styled from "@emotion/styled";
+import { resetRoute } from "utils";
 // grid和flex各自的应用场景
 // 1.要考虑是一维布局还是二维布局
 // 一般来说，一维布局用flex，二维布局用grid
@@ -28,6 +29,7 @@ export const AuthenticatedApp = () => {
               path={"/projects/:projectId/*"}
               element={<ProjectScreen />}
             />
+            <Navigate to={"/projects"} />
           </Routes>
         </Router>
       </Main>
@@ -39,7 +41,9 @@ const PageHeader = () => {
   return (
     <Header between={true}>
       <HeaderLeft gap={true}>
-        <SoftwareLogo width={"18rem"} color={"rgb(38,132,255)"} />
+        <Button type={"link"} onClick={resetRoute}>
+          <SoftwareLogo width={"18rem"} color={"rgb(38,132,255)"} />
+        </Button>
         <h2>项目</h2>
         <h2>用户</h2>
         <h2>another</h2>
