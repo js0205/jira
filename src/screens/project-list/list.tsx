@@ -20,7 +20,7 @@ export interface Project {
 interface ListProps extends TableProps<Project> {
   users: User[];
   refresh?: () => void;
-  setProjectModalOpen: (isOpen: boolean) => void;
+  projectButton: JSX.Element;
 }
 // type PropType = Omit<ListProps, "users">;
 export const List = ({ users, ...props }: ListProps) => {
