@@ -82,14 +82,7 @@ export const List = ({ users, ...props }: ListProps) => {
               <Dropdown
                 overlay={
                   <Menu>
-                    <Menu.Item key={"edit"}>
-                      <ButtonNoPadding
-                        type={"link"}
-                        onClick={() => [props.setProjectModalOpen(true)]}
-                      >
-                        编辑
-                      </ButtonNoPadding>
-                    </Menu.Item>
+                    <Menu.Item key={"edit"}></Menu.Item>
                   </Menu>
                 }
               >
@@ -102,26 +95,4 @@ export const List = ({ users, ...props }: ListProps) => {
       {...props}
     />
   );
-  // return (
-  //   <table>
-  //     <thead>
-  //       <tr>
-  //         <th>名称</th>
-  //         <th>负责人</th>
-  //       </tr>
-  //     </thead>
-  //     <tbody>
-  //       {list.map((project) => (
-  //         <tr key={project.id}>
-  //           <td>{project.name}</td>
-  //           {/* undefined.name */}
-  //           <td>
-  //             {users.find((user) => user.id === project.personId)?.name ||
-  //               "未知"}
-  //           </td>
-  //         </tr>
-  //       ))}
-  //     </tbody>
-  //   </table>
-  // );
 };
