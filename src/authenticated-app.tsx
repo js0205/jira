@@ -8,7 +8,6 @@ import { Navigate, Route, Routes } from "react-router";
 import { BrowserRouter as Router } from "react-router-dom";
 import styled from "@emotion/styled";
 import { resetRoute } from "utils";
-import { useState } from "react";
 import { ProjectModal } from "screens/project-list/project-modal";
 import { ProjectPopover } from "components/project-popover";
 // grid和flex各自的应用场景
@@ -22,19 +21,9 @@ import { ProjectPopover } from "components/project-popover";
 
 //prop drilling
 export const AuthenticatedApp = () => {
-  const [projectModalOpen, setProjectModalOpen] = useState(false);
   return (
     <Container>
-      <PageHeader
-        projectButton={
-          <ButtonNoPadding
-            onClick={() => setProjectModalOpen(true)}
-            type={"link"}
-          >
-            创建项目
-          </ButtonNoPadding>
-        }
-      />
+      <PageHeader projectButton={} />
       <Main>
         <Router>
           <Routes>
@@ -52,15 +41,12 @@ export const AuthenticatedApp = () => {
           </Routes>
         </Router>
       </Main>
-      <ProjectModal
-        projectModalOpen={projectModalOpen}
-        onClose={() => setProjectModalOpen(false)}
-      />
+      <ProjectModal />
     </Container>
   );
 };
 
-const PageHeader = (props: { projectButton: JSX.Element }) => {
+const PageHeader = () => {
   return (
     <Header between={true}>
       <HeaderLeft gap={true}>
@@ -71,7 +57,7 @@ const PageHeader = (props: { projectButton: JSX.Element }) => {
         >
           <SoftwareLogo width={"18rem"} color={"rgb(38,132,255)"} />
         </ButtonNoPadding>
-        <ProjectPopover {...props} />
+        <ProjectPopover />
         <h2>项目</h2>
         <h2>用户</h2>
         <h2>another</h2>

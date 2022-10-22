@@ -3,27 +3,21 @@ import React from "react";
 import { Form, Input } from "antd";
 import { LongButton } from "unauthenticated-app";
 import { useAsync } from "utils/use-async";
+import { useDispatch } from "react-redux";
 
 export const LoginScreen = ({
   onError,
 }: {
   onError: (error: Error) => void;
 }) => {
-  const { login, user } = useAuth();
+  const { login } = useAuth();
   const { run, isLoading } = useAsync(undefined, { throwOnError: true });
+  const dispatch = useDispatch();
   //HTMLFormElement extends Element
-  const handleSubmit = async ({
-    cpassword,
-    ...values
-  }: {
+  const handleSubmit = async (values: {
     username: string;
     password: string;
-    cpassword: string;
   }) => {
-    if (cpassword !== values.password) {
-      onError(new Error("请确认两次输入的密码相同"));
-      return;
-    }
     try {
       await run(login(values));
     } catch (e: any) {

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Pin } from "components/pin";
 import { useEditProject } from "utils/project";
 import { ButtonNoPadding } from "components/lib";
+import { projectListActions } from "./project-list.slice";
 //todo:把所有ID都改成number类型
 export interface Project {
   id: number;
@@ -85,7 +86,9 @@ export const List = ({ users, ...props }: ListProps) => {
                     <Menu.Item key={"edit"}>
                       <ButtonNoPadding
                         type={"link"}
-                        onClick={() => [props.setProjectModalOpen(true)]}
+                        onClick={() =>
+                          dispatch(projectListActions.openProjectModal())
+                        }
                       >
                         编辑
                       </ButtonNoPadding>
