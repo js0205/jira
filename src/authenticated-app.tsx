@@ -23,7 +23,9 @@ import { ProjectPopover } from "components/project-popover";
 export const AuthenticatedApp = () => {
   return (
     <Container>
-      <PageHeader projectButton={} />
+      <PageHeader
+      // projectButton={}
+      />
       <Main>
         <Router>
           <Routes>
