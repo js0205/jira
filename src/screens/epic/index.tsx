@@ -1,7 +1,7 @@
 import { Button, List, Row } from "antd";
 import { ScreenContainer } from "components/lib";
 import dayjs from "dayjs";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useProjectInUrl } from "screens/kanban/util";
 import { useDeleteEpic, useEpics } from "utils/epic";
@@ -14,6 +14,7 @@ export const EpicScreen = () => {
   const { data: epics } = useEpics(useEpicSearchParams());
   const { data: tasks } = useTasks({ projectId: currentProject?.id });
   const { mutate: deleteEpic } = useDeleteEpic(useEpicsQueryKey());
+  const [epicCreateOpen, setEpicCreateOpen] = useState(false);
   return (
     <ScreenContainer>
       <Row between={true}>

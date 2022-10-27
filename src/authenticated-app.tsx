@@ -11,6 +11,7 @@ import { resetRoute } from "utils";
 import { useState } from "react";
 import { ProjectModal } from "screens/project-list/project-modal";
 import { ProjectPopover } from "components/project-popover";
+import { UserPopover } from "components/user-popover";
 // grid和flex各自的应用场景
 // 1.要考虑是一维布局还是二维布局
 // 一般来说，一维布局用flex，二维布局用grid
@@ -64,9 +65,7 @@ const PageHeader = () => {
           <SoftwareLogo width={"18rem"} color={"rgb(38,132,255)"} />
         </ButtonNoPadding>
         <ProjectPopover />
-        <h2>项目</h2>
-        <h2>用户</h2>
-        <h2>another</h2>
+        <UserPopover />
       </HeaderLeft>
       <HeaderRight>
         <User />
