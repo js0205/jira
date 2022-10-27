@@ -1,8 +1,7 @@
 import { useHttp } from "utils/http";
 import { QueryKey, useMutation, useQuery } from "react-query";
 import { Kanban } from "types/kanban";
-import { isQueryKey } from "react-query/types/core/utils";
-import { useReorderKanbanConfig } from "./use-optimistic-options";
+import { useAddConfig, useReorderKanbanConfig } from "./use-optimistic-options";
 
 export const useKanbans = (param?: Partial<Kanban>) => {
   const client = useHttp();
