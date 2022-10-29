@@ -22,8 +22,7 @@ import { UserPopover } from "components/user-popover";
 // 从布局出发：用grid
 
 //prop drilling
-export const AuthenticatedApp = () => {
-  const [projectModalOpen, setProjectModalOpen] = useState(false);
+export default () => {
   return (
     <Container>
       <PageHeader

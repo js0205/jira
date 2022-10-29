@@ -35,7 +35,9 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build -r git@github.com:js0205/js25.github.io.git -b main"
     },
     "eslintConfig": {
         "extends": [
