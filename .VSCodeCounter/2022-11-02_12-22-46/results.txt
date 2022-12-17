@@ -1,0 +1,133 @@
+Date : 2022-11-02 12:22:46
+Directory : g:\jira项目\jira
+Total : 85 files,  3859 codes, 280 comments, 436 blanks, all 4575 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| TypeScript React   |         34 |      1,484 |        113 |        110 |      1,707 |
+| TypeScript         |         30 |        929 |         90 |        104 |      1,123 |
+| XML                |          7 |        925 |          3 |        127 |      1,055 |
+| JavaScript         |          3 |        216 |         43 |         56 |        315 |
+| JSON               |          4 |        166 |          0 |          4 |        170 |
+| HTML               |          2 |         76 |         25 |          9 |        110 |
+| JSON with Comments |          1 |         27 |          0 |          1 |         28 |
+| Markdown           |          1 |         27 |          0 |         22 |         49 |
+| CSS                |          1 |          6 |          6 |          3 |         15 |
+| Ignore             |          1 |          2 |          0 |          0 |          2 |
+| Properties         |          1 |          1 |          0 |          0 |          1 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                      | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                         |         85 |      3,859 |        280 |        436 |      4,575 |
+| public                                                    |          4 |        309 |         68 |         63 |        440 |
+| src                                                       |         74 |      3,408 |        212 |        347 |      3,967 |
+| src\__tests__                                             |          5 |        201 |          4 |         18 |        223 |
+| src\assets                                                |          6 |        924 |          3 |        127 |      1,054 |
+| src\components                                            |         11 |        351 |         17 |         35 |        403 |
+| src\context                                               |          2 |         74 |          1 |          6 |         81 |
+| src\screens                                               |         16 |        869 |         12 |         49 |        930 |
+| src\screens\epic                                          |          3 |        143 |          0 |          8 |        151 |
+| src\screens\kanban                                        |          7 |        451 |          1 |         20 |        472 |
+| src\screens\project                                       |          1 |         49 |          2 |          4 |         55 |
+| src\screens\project-list                                  |          5 |        226 |          9 |         17 |        252 |
+| src\types                                                 |          6 |         27 |          5 |          3 |         35 |
+| src\unauthenticated-app                                   |          3 |        181 |          2 |         13 |        196 |
+| src\utils                                                 |         14 |        621 |         74 |         71 |        766 |
++-----------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                  | language           | code       | comment    | blank      | total      |
++-----------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| g:\jira项目\jira\.env                                       | Properties         |          1 |          0 |          0 |          1 |
+| g:\jira项目\jira\.prettierignore                            | Ignore             |          2 |          0 |          0 |          2 |
+| g:\jira项目\jira\.prettierrc.json                           | JSON               |          1 |          0 |          1 |          2 |
+| g:\jira项目\jira\README.md                                  | Markdown           |         27 |          0 |         22 |         49 |
+| g:\jira项目\jira\commitlint.config.js                       | JavaScript         |          1 |          0 |          1 |          2 |
+| g:\jira项目\jira\package.json                               | JSON               |         83 |          0 |          1 |         84 |
+| g:\jira项目\jira\public\404.html                            | HTML               |         37 |          0 |          5 |         42 |
+| g:\jira项目\jira\public\index.html                          | HTML               |         39 |         25 |          4 |         68 |
+| g:\jira项目\jira\public\manifest.json                       | JSON               |         25 |          0 |          1 |         26 |
+| g:\jira项目\jira\public\mockServiceWorker.js                | JavaScript         |        208 |         43 |         53 |        304 |
+| g:\jira项目\jira\src\App.css                                | CSS                |          6 |          6 |          3 |         15 |
+| g:\jira项目\jira\src\App.test.tsx                           | TypeScript React   |          8 |          0 |          2 |         10 |
+| g:\jira项目\jira\src\App.tsx                                | TypeScript React   |         20 |          0 |          4 |         24 |
+| g:\jira项目\jira\src\__tests__\db.json                      | JSON               |         57 |          0 |          1 |         58 |
+| g:\jira项目\jira\src\__tests__\http.ts                      | TypeScript         |         30 |          4 |          2 |         36 |
+| g:\jira项目\jira\src\__tests__\mark.tsx                     | TypeScript React   |         11 |          0 |          1 |         12 |
+| g:\jira项目\jira\src\__tests__\project-list.tsx             | TypeScript React   |         52 |          0 |          6 |         58 |
+| g:\jira项目\jira\src\__tests__\use-async.ts                 | TypeScript         |         51 |          0 |          8 |         59 |
+| g:\jira项目\jira\src\assets\bug.svg                         | XML                |         14 |          1 |          1 |         16 |
+| g:\jira项目\jira\src\assets\left.svg                        | XML                |          1 |          0 |          0 |          1 |
+| g:\jira项目\jira\src\assets\logo.svg                        | XML                |         14 |          0 |          1 |         15 |
+| g:\jira项目\jira\src\assets\right.svg                       | XML                |        876 |          1 |        123 |      1,000 |
+| g:\jira项目\jira\src\assets\software-logo.svg               | XML                |          1 |          0 |          1 |          2 |
+| g:\jira项目\jira\src\assets\task.svg                        | XML                |         18 |          1 |          1 |         20 |
+| g:\jira项目\jira\src\auth-provider.ts                       | TypeScript         |         40 |          1 |          3 |         44 |
+| g:\jira项目\jira\src\authenticated-app.tsx                  | TypeScript React   |         33 |         78 |          1 |        112 |
+| g:\jira项目\jira\src\components\drag-and-drop.tsx           | TypeScript React   |         55 |          0 |          7 |         62 |
+| g:\jira项目\jira\src\components\error-boundary.tsx          | TypeScript React   |         19 |          1 |          1 |         21 |
+| g:\jira项目\jira\src\components\id-select.tsx               | TypeScript React   |         31 |          8 |          5 |         44 |
+| g:\jira项目\jira\src\components\lib.tsx                     | TypeScript React   |         56 |          1 |          7 |         64 |
+| g:\jira项目\jira\src\components\mark.tsx                    | TypeScript React   |         19 |          0 |          1 |         20 |
+| g:\jira项目\jira\src\components\pin.tsx                     | TypeScript React   |         16 |          0 |          1 |         17 |
+| g:\jira项目\jira\src\components\profiler.tsx                | TypeScript React   |         35 |          0 |          2 |         37 |
+| g:\jira项目\jira\src\components\project-popover.tsx         | TypeScript React   |         39 |          0 |          2 |         41 |
+| g:\jira项目\jira\src\components\task-type-select.tsx        | TypeScript React   |          9 |          0 |          2 |         11 |
+| g:\jira项目\jira\src\components\test-closure.tsx            | TypeScript React   |         40 |          7 |          4 |         51 |
+| g:\jira项目\jira\src\components\user-popover.tsx            | TypeScript React   |         32 |          0 |          3 |         35 |
+| g:\jira项目\jira\src\context\auth-context.tsx               | TypeScript React   |         61 |          1 |          5 |         67 |
+| g:\jira项目\jira\src\context\index.tsx                      | TypeScript React   |         13 |          0 |          1 |         14 |
+| g:\jira项目\jira\src\index.tsx                              | TypeScript React   |         22 |          4 |          3 |         29 |
+| g:\jira项目\jira\src\logo.svg                               | XML                |          1 |          0 |          0 |          1 |
+| g:\jira项目\jira\src\react-app-env.d.ts                     | TypeScript         |          0 |          1 |          1 |          2 |
+| g:\jira项目\jira\src\reportWebVitals.ts                     | TypeScript         |         13 |          0 |          3 |         16 |
+| g:\jira项目\jira\src\screens\epic\create-epic.tsx           | TypeScript React   |         72 |          0 |          3 |         75 |
+| g:\jira项目\jira\src\screens\epic\index.tsx                 | TypeScript React   |         66 |          0 |          2 |         68 |
+| g:\jira项目\jira\src\screens\epic\util.ts                   | TypeScript         |          5 |          0 |          3 |          8 |
+| g:\jira项目\jira\src\screens\kanban\create-kanban.tsx       | TypeScript React   |         25 |          0 |          1 |         26 |
+| g:\jira项目\jira\src\screens\kanban\create-task.ts          | TypeScript         |         33 |          0 |          3 |         36 |
+| g:\jira项目\jira\src\screens\kanban\index.tsx               | TypeScript React   |        119 |          1 |          4 |        124 |
+| g:\jira项目\jira\src\screens\kanban\kanban-column.tsx       | TypeScript React   |        117 |          0 |          6 |        123 |
+| g:\jira项目\jira\src\screens\kanban\search-panel.ts         | TypeScript         |         33 |          0 |          0 |         33 |
+| g:\jira项目\jira\src\screens\kanban\task-modal.tsx          | TypeScript React   |         75 |          0 |          3 |         78 |
+| g:\jira项目\jira\src\screens\kanban\util.ts                 | TypeScript         |         49 |          0 |          3 |         52 |
+| g:\jira项目\jira\src\screens\project-list\index.tsx         | TypeScript React   |         49 |          2 |          7 |         58 |
+| g:\jira项目\jira\src\screens\project-list\list.tsx          | TypeScript React   |         94 |          3 |          2 |         99 |
+| g:\jira项目\jira\src\screens\project-list\project-modal.tsx | TypeScript React   |         12 |          0 |          1 |         13 |
+| g:\jira项目\jira\src\screens\project-list\search-panel.tsx  | TypeScript React   |         47 |          3 |          4 |         54 |
+| g:\jira项目\jira\src\screens\project-list\util.ts           | TypeScript         |         24 |          1 |          3 |         28 |
+| g:\jira项目\jira\src\screens\project\index.tsx              | TypeScript React   |         49 |          2 |          4 |         55 |
+| g:\jira项目\jira\src\setupTests.ts                          | TypeScript         |         10 |          4 |          3 |         17 |
+| g:\jira项目\jira\src\types\epic.ts                          | TypeScript         |          7 |          2 |          1 |         10 |
+| g:\jira项目\jira\src\types\index.ts                         | TypeScript         |          1 |          0 |          1 |          2 |
+| g:\jira项目\jira\src\types\kanban.ts                        | TypeScript         |          5 |          0 |          0 |          5 |
+| g:\jira项目\jira\src\types\project.ts                       | TypeScript         |          0 |          0 |          1 |          1 |
+| g:\jira项目\jira\src\types\task-types.ts                    | TypeScript         |          4 |          0 |          0 |          4 |
+| g:\jira项目\jira\src\types\task.ts                          | TypeScript         |         10 |          3 |          0 |         13 |
+| g:\jira项目\jira\src\unauthenticated-app\index.tsx          | TypeScript React   |         81 |          1 |          8 |         90 |
+| g:\jira项目\jira\src\unauthenticated-app\login.tsx          | TypeScript React   |         52 |          1 |          2 |         55 |
+| g:\jira项目\jira\src\unauthenticated-app\register.tsx       | TypeScript React   |         48 |          0 |          3 |         51 |
+| g:\jira项目\jira\src\utils\epic.ts                          | TypeScript         |         31 |          0 |          4 |         35 |
+| g:\jira项目\jira\src\utils\http.ts                          | TypeScript         |         68 |         18 |         11 |         97 |
+| g:\jira项目\jira\src\utils\index.ts                         | TypeScript         |         84 |         26 |         11 |        121 |
+| g:\jira项目\jira\src\utils\kanban.ts                        | TypeScript         |         47 |          3 |          5 |         55 |
+| g:\jira项目\jira\src\utils\project.ts                       | TypeScript         |         57 |          0 |          9 |         66 |
+| g:\jira项目\jira\src\utils\reorder.ts                       | TypeScript         |         34 |         20 |          3 |         57 |
+| g:\jira项目\jira\src\utils\task-type.ts                     | TypeScript         |          9 |          0 |          1 |         10 |
+| g:\jira项目\jira\src\utils\task.ts                          | TypeScript         |         59 |          0 |          6 |         65 |
+| g:\jira项目\jira\src\utils\url.ts                           | TypeScript         |         22 |          3 |          2 |         27 |
+| g:\jira项目\jira\src\utils\use-async.ts                     | TypeScript         |         80 |          4 |          5 |         89 |
+| g:\jira项目\jira\src\utils\use-optimistic-options.ts        | TypeScript         |         48 |          0 |          7 |         55 |
+| g:\jira项目\jira\src\utils\use-undo.ts                      | TypeScript         |         66 |          0 |          2 |         68 |
+| g:\jira项目\jira\src\utils\user-select.tsx                  | TypeScript React   |          7 |          0 |          2 |          9 |
+| g:\jira项目\jira\src\utils\user.ts                          | TypeScript         |          9 |          0 |          3 |         12 |
+| g:\jira项目\jira\src\wdyr.js                                | JavaScript         |          7 |          0 |          2 |          9 |
+| g:\jira项目\jira\tsconfig.json                              | JSON with Comments |         27 |          0 |          1 |         28 |
+| Total                                                     |                    |      3,859 |        280 |        436 |      4,575 |
++-----------------------------------------------------------+--------------------+------------+------------+------------+------------+

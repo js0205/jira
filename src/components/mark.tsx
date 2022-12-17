@@ -1,5 +1,5 @@
 import React from "react";
-export const mark = ({ name, keyword }: { name: string; keyword: string }) => {
+export const Mark = ({ name, keyword }: { name: string; keyword: string }) => {
   if (!keyword) {
     return <>{name}</>;
   }

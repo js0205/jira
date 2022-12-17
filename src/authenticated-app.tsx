@@ -22,7 +22,7 @@ import { UserPopover } from "components/user-popover";
 // 从布局出发：用grid
 
 //prop drilling
-export default () => {
+export default function AuthenticatedApp(){
   return (
     <Container>
       <PageHeader

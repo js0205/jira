@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 import { Row, Typography } from "antd";
 import { useProjects } from "utils/project";
 import { useUsers } from "utils/user";
-import { ButtonNoPadding } from "components/lib";
+import { ButtonNoPadding, ScreenContainer } from "components/lib";
 import { useProjectModal, useProjectsSearchParams } from "./util";
 
 //基本类型，可以放到依赖里；组件状态，可以放到依赖里；非组件状态的对象，绝不可以放到依赖里
@@ -26,25 +26,27 @@ export const ProjectListScreen = () => {
   const { data: users } = useUsers();
 
   return (
-    <Container>
-      <Row between={true}>
-        <h1>项目列表</h1>
-        <ButtonNoPadding onClick={open} type={"link"}>
-          创建项目
-        </ButtonNoPadding>
-      </Row>
-      <SearchPanel param={param} setParam={setParam} users={users || []} />
-      {error ? (
-        <Typography.Text type={"danger"}>{error.message}</Typography.Text>
-      ) : null}
-      <List
-        projectButton={props.projectButton}
-        refresh={retry}
-        loading={isLoading}
-        dataSource={list || []}
-        users={users || []}
-      />
-    </Container>
+    <Profiler id={'项目列表'}>
+      <ScreenContainer>
+        <Row between={true}>
+          <h1>项目列表</h1>
+          <ButtonNoPadding onClick={open} type={"link"}>
+            创建项目
+          </ButtonNoPadding>
+        </Row>
+        <SearchPanel param={param} setParam={setParam} users={users || []} />
+        {error ? (
+          <Typography.Text type={"danger"}>{error.message}</Typography.Text>
+        ) : null}
+        <List
+          projectButton={props.projectButton}
+          refresh={retry}
+          loading={isLoading}
+          dataSource={list || []}
+          users={users || []}
+        />
+      </ScreenContainer>
+    </Profiler>
   );
 };
 

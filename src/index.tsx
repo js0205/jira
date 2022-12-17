@@ -11,10 +11,12 @@ import { AppProviders } from "context";
 loadServer(() =>
   ReactDOM.render(
     <React.StrictMode>
-      <AppProviders>
-        <DevTools />
-        <App />
-      </AppProviders>
+      <Propfiler id={'Root App'} phases={['mount']}>
+        <AppProviders>
+          <DevTools />
+          <App />
+        </AppProviders>
+      </Propfiler>
     </React.StrictMode>,
     document.getElementById("root")
   )

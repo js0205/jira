@@ -14,7 +14,10 @@ export const isVoid = (value: unknown) =>
 // b={name:'Jack'}
 // b=()=>{}
 //在一个函数里，改变传入的对象本身是不好的
-export const cleanObject = (object: { [key: string]: unknown }) => {
+export const cleanObject = (object?: { [key: string]: unknown }) => {
+  if (!object) {
+    return {}
+  }
   // Object.assign({}, object);
   const result = { ...object };
   Object.keys(result).forEach((key: string) => {
